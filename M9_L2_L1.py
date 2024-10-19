@@ -29,7 +29,7 @@ def show_image():
             img = ImageTk.PhotoImage(img)
             label.config(image=img)
             label.image = img
-        except requests.RequestException as e:
+        except Exception as e:
             mb.showerror("Ошибка", f"Не удалось загрузить изображение: {e}")
 
 window = Tk()
